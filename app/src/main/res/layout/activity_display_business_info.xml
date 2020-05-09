@@ -4,6 +4,189 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".DisplayBusinessInfoActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:id="@+id/businessNameLabel"
+        android:text="company name"
+        android:textSize="36dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/addStar1"/>
+
+    <ImageView
+        android:id="@+id/addStar1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/empty_star"
+        app:layout_constraintEnd_toStartOf="@id/addStar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/businessNameLabel"
+        app:layout_constraintBottom_toTopOf="@id/customerDataBackground"
+        />
+    <ImageView
+        android:id="@+id/addStar2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/empty_star"
+        app:layout_constraintEnd_toStartOf="@id/addStar3"
+        app:layout_constraintStart_toEndOf="@id/addStar1"
+        app:layout_constraintTop_toTopOf="@id/addStar1"/>
+    <ImageView
+        android:id="@+id/addStar3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/empty_star"
+        app:layout_constraintEnd_toStartOf="@id/addStar4"
+        app:layout_constraintStart_toEndOf="@id/addStar2"
+        app:layout_constraintTop_toTopOf="@id/addStar1"/>
+    <ImageView
+        android:id="@+id/addStar4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/empty_star"
+        app:layout_constraintEnd_toStartOf="@id/addStar5"
+        app:layout_constraintStart_toEndOf="@id/addStar3"
+        app:layout_constraintTop_toTopOf="@id/addStar1"/>
+    <ImageView
+        android:id="@+id/addStar5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/empty_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addStar4"
+        app:layout_constraintTop_toTopOf="@id/addStar1" />
+
+    <ImageView
+        android:id="@+id/customerDataBackground"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/counter_background"
+        app:layout_constraintBottom_toTopOf="@id/safetyPolicyLabel"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addStar1"
+        />
+
+    <TextView
+        android:id="@+id/numInStoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customers Shopping:"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/numWaitLabel"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="@id/customerDataBackground"
+        app:layout_constraintRight_toLeftOf="@id/numInStoreValue"
+        app:layout_constraintTop_toTopOf="@id/customerDataBackground" />
+
+    <TextView
+        android:id="@+id/numInStoreValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="###"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/numWaitLabel"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toRightOf="@id/numInStoreLabel"
+        app:layout_constraintRight_toRightOf="@id/customerDataBackground"
+        app:layout_constraintTop_toTopOf="@id/customerDataBackground" />
+
+    <TextView
+        android:id="@+id/numWaitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customers Waiting:"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/maxOccupancyLabel"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@id/numInStoreLabel"
+        app:layout_constraintRight_toRightOf="@id/numInStoreLabel"
+        app:layout_constraintTop_toBottomOf="@id/numInStoreLabel" />
+
+    <TextView
+        android:id="@+id/numWaitValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="###"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/maxOccupancyLabel"
+        app:layout_constraintLeft_toLeftOf="@id/numInStoreValue"
+        app:layout_constraintRight_toRightOf="@id/numInStoreValue"
+        app:layout_constraintTop_toBottomOf="@id/numInStoreLabel" />
+
+
+    <TextView
+        android:id="@+id/maxOccupancyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max Occupancy:"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/customerDataBackground"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@id/numInStoreLabel"
+        app:layout_constraintRight_toRightOf="@id/numInStoreLabel"
+        app:layout_constraintTop_toBottomOf="@id/numWaitLabel" />
+
+    <TextView
+        android:id="@+id/maxOccupancyValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="###"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/customerDataBackground"
+        app:layout_constraintLeft_toLeftOf="@id/numInStoreValue"
+        app:layout_constraintRight_toRightOf="@id/numInStoreValue"
+        app:layout_constraintTop_toBottomOf="@id/numWaitLabel" />
+
+    <TextView
+        android:id="@+id/safetyPolicyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Safety Policies:"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/customerReviewsLabel"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customerDataBackground" />
+
+    <TextView
+        android:id="@+id/customerReviewsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer Reviews:"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/addReviewButton"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/safetyPolicyLabel" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/add_review_button"
+        android:id="@+id/addReviewButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customerReviewsLabel"
+        android:onClick="launchSignUpCustomer"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

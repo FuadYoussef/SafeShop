@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddBusinessInfoActivity"></activity>
+        <activity android:name=".ShowReviewActivity"></activity>
+        <activity android:name=".AddBusinessInfoActivity" />
         <activity android:name=".CounterActivity" />
         <activity android:name=".BusinessPortalActivity" />
         <activity android:name=".AddReviewActivity" />

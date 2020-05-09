@@ -121,9 +121,9 @@
     <ImageView
         android:id="@+id/submitReviewButton"
         android:layout_width="150dp"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:onClick="submitReview"
-        android:src="@mipmap/sign_up_button"
+        android:src="@mipmap/submit_button"
         android:text="Sign Up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

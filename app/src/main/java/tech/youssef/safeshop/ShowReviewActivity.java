@@ -13,11 +13,15 @@ public class ShowReviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_review);
         reviewContent = findViewById(R.id.storeNameReviewLabel);
-        String companyName;
         Bundle extras = getIntent().getExtras();
         if(extras != null) {
-            companyName = extras.getString("name");
-            reviewContent.setText(companyName);
+            if (extras.containsKey("name")) {
+                String ns = extras.getString("name");
+                reviewContent.setText(ns);
+            } else{
+                System.out.println("it got lost");
+            }
+
         }
     }
 }

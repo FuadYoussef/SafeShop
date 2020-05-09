@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/accountBackground"
         android:layout_width="400dp"
-        android:layout_height="250"
+        android:layout_height="250dp"
         android:src="@mipmap/profile_picture_image_half"
         android:text="background"
         app:layout_constraintBottom_toTopOf="@id/login"

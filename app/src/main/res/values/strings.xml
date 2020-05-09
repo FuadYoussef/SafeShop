@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">SafeShop</string>
+    <string-array name="store_type_array">
+        <item>Grocery Store</item>
+        <item>Restaurant</item>
+        <item>Bank</item>
+        <item>Pharmacy</item>
+        <item>Post Office</item>
+    </string-array>
+
+    <string-array name="store_location_array">
+        <item>5 miles</item>
+        <item>10 miles</item>
+        <item>15 miles</item>
+        <item>20 miles</item>
+        <item>25 miles</item>
+    </string-array>
+
+    <string-array name="sort_by_array">
+        <item>Number of People</item>
+        <item>Wait Line Length</item>
+        <item>Verified</item>
+        <item>Safety Rating</item>
+    </string-array>
+
 </resources>

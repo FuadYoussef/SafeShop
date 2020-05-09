@@ -4,6 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".SearchActivity">
+
+    <TextView
+        android:id="@+id/storeSearchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search for a Store:"
+        android:textColor="@android:color/white"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/typeSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/typeSpinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/locationSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storeSearchLabel" />
+
+    <Spinner
+        android:id="@+id/locationSpinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeSpinner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SafeShop</string>
     <string-array name="store_type_array">
+        <item>Store Type…</item>
         <item>Grocery Store</item>
         <item>Restaurant</item>
         <item>Bank</item>
@@ -9,6 +10,7 @@
     </string-array>
 
     <string-array name="store_location_array">
+        <item>Search Radius…</item>
         <item>5 miles</item>
         <item>10 miles</item>
         <item>15 miles</item>
@@ -17,6 +19,7 @@
     </string-array>
 
     <string-array name="sort_by_array">
+        <item>Sort by…</item>
         <item>Number of People</item>
         <item>Wait Line Length</item>
         <item>Verified</item>

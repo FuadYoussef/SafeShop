@@ -40,7 +40,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/subtractButton"
         app:layout_constraintTop_toBottomOf="@id/counterTitleText"
-        android:onClick="launchSignUp"
+        android:onClick="add"
         />
 
     <ImageView
@@ -52,7 +52,7 @@
         app:layout_constraintLeft_toRightOf="@id/addButton"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/counterTitleText"
-        android:onClick="launchSignUp"
+        android:onClick="subtract"
         />
 
     <TextView

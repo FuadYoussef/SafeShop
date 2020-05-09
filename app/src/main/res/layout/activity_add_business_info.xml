@@ -67,7 +67,6 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="Max Capacity"
-        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@id/accountBackground"
         app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -125,7 +124,6 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/white"
         android:hint="Policy 3"
-        android:inputType="textPassword"
         android:maxLines="1"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@id/addMoreButton"
@@ -156,6 +154,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        android:onClick="saveChanges"
         app:layout_constraintTop_toBottomOf="@id/addMoreButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

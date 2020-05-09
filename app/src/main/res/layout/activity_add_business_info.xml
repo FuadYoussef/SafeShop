@@ -4,6 +4,158 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".AddBusinessInfoActivity">
+
+
+    <ImageView
+        android:id="@+id/accountBackground"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/counter_background"
+        android:text="background"
+        app:layout_constraintBottom_toTopOf="@id/safetyPolicyHeader"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/companyInfoLabel" />
+
+    <TextView
+        android:id="@+id/companyInfoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Company Info:"
+        android:textColor="@android:color/white"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@id/accountBackground"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameEdit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        app:layout_constraintBottom_toTopOf="@id/addressEdit"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/accountBackground"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"/>
+
+    <EditText
+        android:id="@+id/addressEdit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        app:layout_constraintBottom_toTopOf="@id/passwordEdit"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameEdit"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"/>
+
+
+    <EditText
+        android:id="@+id/passwordEdit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Max Capacity"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@id/accountBackground"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addressEdit"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/safetyPolicyHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Safety Policies:"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/safetyPolicy1"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountBackground" />
+
+    <EditText
+        android:id="@+id/safetyPolicy1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white"
+        android:hint="Policy 1"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/safetyPolicy2"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/safetyPolicyHeader" />
+
+
+    <EditText
+        android:id="@+id/safetyPolicy2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white"
+        android:hint="Policy 2"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/safetyPolicy3"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/safetyPolicy1" />
+
+    <EditText
+        android:id="@+id/safetyPolicy3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white"
+        android:hint="Policy 3"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/addMoreButton"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/safetyPolicy2" />
+
+    <ImageView
+        android:id="@+id/addMoreButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/button_add_more"
+        android:text="Sign Up"
+        app:layout_constraintBottom_toTopOf="@id/saveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/safetyPolicy3" />
+
+    <ImageView
+        android:id="@+id/saveButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:src="@mipmap/save_changes_button"
+        android:text="Sign Up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addMoreButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

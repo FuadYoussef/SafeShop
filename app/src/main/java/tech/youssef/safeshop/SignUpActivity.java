@@ -16,8 +16,13 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void launchSearch(View view) {
-        Intent searchIntent = new Intent(this, SearchActivity.class);
-        startActivity(searchIntent);
+        if (isCustomer) {
+            Intent searchIntent = new Intent(this, SearchActivity.class);
+            startActivity(searchIntent);
+        } else {
+            Intent portalIntent = new Intent(this, BusinessPortalActivity.class);
+            startActivity(portalIntent);
+        }
     }
 
     public void launchSignUpCustomer(View view) {

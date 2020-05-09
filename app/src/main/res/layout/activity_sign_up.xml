@@ -70,11 +70,12 @@
         app:layout_constraintTop_toBottomOf="@id/emailEdit"
         android:maxLines="1"/>
 
-    <Button
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:text="Sign Up"
+        android:src="@mipmap/sign_up_button"
         android:id="@+id/createAccountButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Create Account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"

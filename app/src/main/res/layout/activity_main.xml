@@ -32,10 +32,11 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:text="Sign Up"
+        android:src="@mipmap/sign_up_button"
         android:id="@+id/signUpButton"
         app:layout_constraintBottom_toTopOf="@id/loginButton"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -44,10 +45,11 @@
         android:onClick="launchSignUp"
         />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:text="Log In"
+        android:src="@mipmap/log_in_button"
         android:id="@+id/loginButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

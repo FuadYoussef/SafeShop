@@ -62,7 +62,7 @@ public class mAdapter extends RecyclerView.Adapter<mAdapter.ViewHolder> {
 
         @Override
         public void onClick(View view) {
-            Intent reviewIntent = new Intent(view.getContext(), AddReviewActivity.class);
+            Intent reviewIntent = new Intent(view.getContext(), DisplayBusinessInfoActivity.class);
             reviewIntent.putExtra("name", businessName.getText());
             view.getContext().startActivity(reviewIntent);
         }

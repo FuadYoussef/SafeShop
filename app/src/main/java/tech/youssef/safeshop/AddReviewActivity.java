@@ -33,7 +33,6 @@ public class AddReviewActivity extends AppCompatActivity {
         if(extras != null) {
             companyName = extras.getString("name");
             companyNameTv.setText(companyName);
-
         }
 
     }

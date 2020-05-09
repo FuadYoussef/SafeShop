@@ -99,4 +99,12 @@ public class Business {
     public String getName() {
         return name;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getRange() {
+        return range;
+    }
 }

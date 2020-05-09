@@ -15,9 +15,9 @@ public class DisplayResultsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Bundle extras = getIntent().getExtras();
-        String type;
-        String sort;
-        int location;
+        String type = "";
+        String sort = "";
+        int location = 0;
         if(extras != null) {
             type = extras.getString("type");
             sort = extras.getString("sort");
@@ -39,11 +39,47 @@ public class DisplayResultsActivity extends AppCompatActivity {
         ArrayList<String> bnames = new ArrayList<>();
         ArrayList<Integer> bnum = new ArrayList<>();
         ArrayList<Integer> bwait = new ArrayList<>();
+        ArrayList<Business> temp = new ArrayList<>();
+
         for (Business b : businesses) {
+            if (b.getRange() < location && b.getType().equals(type)) {
+                temp.add(b);
+            }
+        }
+
+        if(sort.equals("Number of People")) {
+            for (int i = 1; i < temp.size(); i++) {
+                int current = temp.get(i).getNumCustomers();
+                int j = i - 1;
+                while(j >= 0 && current < temp.get(j).getNumCustomers()) {
+                    temp.set(j+1, temp.get(j));
+                    j--;
+                }
+                // at this point we've exited, so j is either -1
+                // or it's at the first element where current >= a[j]
+                temp.set(j+1, temp.get(i));
+            }
+        } else if(sort.equals("Wait Line Length")) {
+            for (int i = 1; i < temp.size(); i++) {
+                int current = temp.get(i).getNumWaiting();
+                int j = i - 1;
+                while(j >= 0 && current < temp.get(j).getNumWaiting()) {
+                    temp.set(j+1, temp.get(j));
+                    j--;
+                }
+                // at this point we've exited, so j is either -1
+                // or it's at the first element where current >= a[j]
+                temp.set(j+1, temp.get(i));
+            }
+        }
+
+        for (Business b: temp) {
             bnames.add(b.getName());
             bnum.add(b.getNumCustomers());
             bwait.add(b.getNumWaiting());
         }
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_results);
         recyclerView = findViewById(R.id.resultRecycle);

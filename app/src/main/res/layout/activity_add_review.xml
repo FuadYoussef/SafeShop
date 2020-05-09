@@ -4,6 +4,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".AddReviewActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:id="@+id/addReviewLabel"
+        android:text="Add a Review"
+        android:textSize="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/storeNameReviewLabel"/>
+
+    <TextView
+        android:id="@+id/storeNameReviewLabel"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Store Name"
+        android:textColor="@android:color/white"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@id/addReviewLabel"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addReviewLabel" />
+
+    <TextView
+        android:id="@+id/addReviewRatingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating:"
+        android:textColor="@android:color/white"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toTopOf="@id/addStar1"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/storeNameReviewLabel" />
+
+    <ImageView
+        android:id="@+id/addStar1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/empty_star"
+        app:layout_constraintEnd_toStartOf="@id/addStar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addReviewRatingLabel"
+        app:layout_constraintBottom_toTopOf="@id/addReviewCommentLabel"
+        android:onClick="addStar1"/>
+    <ImageView
+        android:id="@+id/addStar2"
+        android:onClick="addStar2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/empty_star"
+        app:layout_constraintEnd_toStartOf="@id/addStar3"
+        app:layout_constraintStart_toEndOf="@id/addStar1"
+        app:layout_constraintTop_toTopOf="@id/addStar1"/>
+    <ImageView
+        android:id="@+id/addStar3"
+        android:onClick="addStar3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/empty_star"
+        app:layout_constraintEnd_toStartOf="@id/addStar4"
+        app:layout_constraintStart_toEndOf="@id/addStar2"
+        app:layout_constraintTop_toTopOf="@id/addStar1"/>
+    <ImageView
+        android:id="@+id/addStar4"
+        android:onClick="addStar4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/empty_star"
+        app:layout_constraintEnd_toStartOf="@id/addStar5"
+        app:layout_constraintStart_toEndOf="@id/addStar3"
+        app:layout_constraintTop_toTopOf="@id/addStar1"/>
+    <ImageView
+        android:id="@+id/addStar5"
+        android:onClick="addStar5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/empty_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addStar4"
+        app:layout_constraintTop_toTopOf="@id/addStar1" />
+
+    <TextView
+        android:id="@+id/addReviewCommentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a Comment:"
+        android:textColor="@android:color/white"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toTopOf="@id/commentEdit"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addStar1" />
+
+    <EditText
+        android:id="@+id/commentEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Add your comments here"
+        app:layout_constraintBottom_toTopOf="@id/submitReviewButton"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addReviewCommentLabel"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"/>
+
+    <ImageView
+        android:id="@+id/submitReviewButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:onClick="submitReview"
+        android:src="@mipmap/sign_up_button"
+        android:text="Sign Up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commentEdit" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

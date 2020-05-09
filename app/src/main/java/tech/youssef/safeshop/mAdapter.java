@@ -59,13 +59,14 @@ public class mAdapter extends RecyclerView.Adapter<mAdapter.ViewHolder> {
             numPeople = itemView.findViewById(R.id.numPeopleLabel);
             waitLine = itemView.findViewById(R.id.numWaitingLabel);
             parentLayout = itemView.findViewById(R.id.business_element_layout);
-
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-
+            Intent reviewIntent = new Intent(view.getContext(), AddReviewActivity.class);
+            reviewIntent.putExtra("name", businessName.getText());
+            view.getContext().startActivity(reviewIntent);
         }
     }
 }

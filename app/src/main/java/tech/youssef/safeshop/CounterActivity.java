@@ -2,6 +2,7 @@ package tech.youssef.safeshop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -24,9 +25,9 @@ public class CounterActivity extends AppCompatActivity {
         this.numInStoreValue = findViewById(R.id.numInStoreValue);
         this.numWaitValue = findViewById(R.id.numWaitValue);
 
-        this.numCustomersValue.setText(numCustomers);
-        this.numInStoreValue.setText(numShopping);
-        this.numWaitValue.setText(numWaiting);
+        this.numCustomersValue.setText(Integer.toString(numCustomers));
+        this.numInStoreValue.setText(Integer.toString(numShopping));
+        this.numWaitValue.setText(Integer.toString(numWaiting));
 
     }
 
@@ -39,10 +40,9 @@ public class CounterActivity extends AppCompatActivity {
             numWaiting = numCustomers - numShopping;
         }
 
-        this.numCustomersValue.setText(numCustomers);
-        this.numInStoreValue.setText(numShopping);
-        this.numWaitValue.setText(numWaiting);
-
+        this.numCustomersValue.setText(Integer.toString(numCustomers));
+        this.numInStoreValue.setText(Integer.toString(numShopping));
+        this.numWaitValue.setText(Integer.toString(numWaiting));
 
     }
 
@@ -59,8 +59,8 @@ public class CounterActivity extends AppCompatActivity {
                 numShopping--;
             }
         }
-        this.numCustomersValue.setText(numCustomers);
-        this.numInStoreValue.setText(numShopping);
-        this.numWaitValue.setText(numWaiting);
+        this.numCustomersValue.setText(Integer.toString(numCustomers));
+        this.numInStoreValue.setText(Integer.toString(numShopping));
+        this.numWaitValue.setText(Integer.toString(numWaiting));
     }
 }

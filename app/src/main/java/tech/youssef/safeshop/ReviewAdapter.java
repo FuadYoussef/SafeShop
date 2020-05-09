@@ -52,9 +52,12 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
 
         @Override
         public void onClick(View view) {
+            /*
             Intent reviewIntent = new Intent(view.getContext(), ShowReviewActivity.class);
             reviewIntent.putExtra("name", reviewContent.getText());
+            System.out.println(reviewContent.getText().toString());
             view.getContext().startActivity(reviewIntent);
+             */
         }
     }
 }

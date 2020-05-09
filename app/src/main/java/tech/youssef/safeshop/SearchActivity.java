@@ -9,7 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 public class SearchActivity extends AppCompatActivity {
-
+    Spinner typeSpinner;
+    Spinner locationSpinner;
+    Spinner sortSpinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +51,13 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     public void search(View view) {
+        String type = typeSpinner.getSelectedItem().toString();
+        int location = Integer.parseInt(locationSpinner.getSelectedItem().toString());
+        String sort = sortSpinner.getSelectedItem().toString();
         Intent intent = new Intent(this, DisplayResultsActivity.class);
+        intent.putExtra("type", type);
+        intent.putExtra("location", location);
+        intent.putExtra("sort", sort);
         startActivity(intent);
     }
 }

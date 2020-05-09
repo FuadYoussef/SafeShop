@@ -9,12 +9,15 @@ public class Business {
     private int numShopping;
     private int numWaiting;
     private int maxOccupancy;
-    private ArrayList<String> reviews = new ArrayList<>();
+    private ArrayList<String> reviews;
+    private ArrayList<String> policies;
     private double rating;
     private int ratingSum;
     private int numRating;
+    private String type;
+    private int range;
 
-    public Business(String name, int maxOccupancy) {
+    public Business(String name, int maxOccupancy, int range, String type, ArrayList<String> reviews, ArrayList<String> policies) {
         this.name = name;
         this.numCustomers = 0;
         this.numShopping = 0;
@@ -24,6 +27,8 @@ public class Business {
         this.rating = 0;
         this.ratingSum = 0;
         this.numRating = 0;
+        this.reviews = reviews;
+        this.policies = policies;
     }
 
     public void addCustomer() {
@@ -59,6 +64,11 @@ public class Business {
         reviews.add(review);
     }
 
+    public void addPolicy(String policy) {
+        policies.add(policy);
+    }
+
+
     public int getNumCustomers() {
         return numCustomers;
     }
@@ -80,5 +90,13 @@ public class Business {
 
     public ArrayList<String> getReviews() {
         return reviews;
+    }
+
+    public ArrayList<String> getPolicies() {
+        return policies;
+    }
+
+    public String getName() {
+        return name;
     }
 }

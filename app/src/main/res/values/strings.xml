@@ -11,11 +11,11 @@
 
     <string-array name="store_location_array">
         <item>Search Radius…</item>
-        <item>5 miles</item>
-        <item>10 miles</item>
-        <item>15 miles</item>
-        <item>20 miles</item>
-        <item>25 miles</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
     </string-array>
 
     <string-array name="sort_by_array">

@@ -14,15 +14,36 @@ public class DisplayResultsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ArrayList<String> businessNames = new ArrayList<>();
-        ArrayList<Integer> numCustomers = new ArrayList<>();
-        ArrayList<Integer> numWaiting = new ArrayList<>();
-        businessNames.add("Bank");
-        businessNames.add("Post Office");
-        numCustomers.add(29);
-        numCustomers.add(10);
-        numWaiting.add(2);
-        numWaiting.add(4);
+        Bundle extras = getIntent().getExtras();
+        String type;
+        String sort;
+        int location;
+        if(extras != null) {
+            type = extras.getString("type");
+            sort = extras.getString("sort");
+            location = extras.getInt("location");
+        }
+        ArrayList<Business> businesses = new ArrayList<>();
+        ArrayList<String> reviews1 = new ArrayList<>();
+        ArrayList<String> reviews2 = new ArrayList<>();
+        ArrayList<String> reviews3 = new ArrayList<>();
+        ArrayList<String> policy1 = new ArrayList<>();
+        ArrayList<String> policy2 = new ArrayList<>();
+        ArrayList<String> policy3 = new ArrayList<>();
+        Business b1 = new Business("Publix", 50, 5, "Grocery Store" ,reviews1, policy1);
+        Business b2 = new Business("Kroger", 100, 10, "Grocery Store" ,reviews2, policy2);
+        Business b3 = new Business("Whole Foods", 70, 20, "Grocery Store" ,reviews3, policy3);
+        businesses.add(b1);
+        businesses.add(b2);
+        businesses.add(b3);
+        ArrayList<String> bnames = new ArrayList<>();
+        ArrayList<Integer> bnum = new ArrayList<>();
+        ArrayList<Integer> bwait = new ArrayList<>();
+        for (Business b : businesses) {
+            bnames.add(b.getName());
+            bnum.add(b.getNumCustomers());
+            bwait.add(b.getNumWaiting());
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_results);
         recyclerView = findViewById(R.id.resultRecycle);
@@ -30,7 +51,7 @@ public class DisplayResultsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         // specify an adapter (see also next example)
-        mAdapter = new mAdapter(businessNames, numCustomers, numWaiting, this);
+        mAdapter = new mAdapter(bnames, bnum, bwait, this);
         recyclerView.setAdapter(mAdapter);
     }
 }

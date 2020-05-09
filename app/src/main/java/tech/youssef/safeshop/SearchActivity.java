@@ -2,6 +2,7 @@ package tech.youssef.safeshop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -48,6 +49,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     public void search(View view) {
-
+        Intent intent = new Intent(this, DisplayResultsActivity.class);
+        startActivity(intent);
     }
 }

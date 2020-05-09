@@ -10,9 +10,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class mAdapter extends RecyclerView.Adapter<mAdapter.ViewHolder> {
@@ -39,8 +38,8 @@ public class mAdapter extends RecyclerView.Adapter<mAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         viewHolder.businessName.setText(businessNames.get(i));
-        viewHolder.numPeople.setText(numPeople.get(i));
-        viewHolder.waitLine.setText(waitLines.get(i));
+        viewHolder.numPeople.setText(Integer.toString(numPeople.get(i)));
+        viewHolder.waitLine.setText(Integer.toString(waitLines.get(i)));
     }
 
     @Override
@@ -53,7 +52,7 @@ public class mAdapter extends RecyclerView.Adapter<mAdapter.ViewHolder> {
         TextView businessName;
         TextView numPeople;
         TextView waitLine;
-        RelativeLayout parentLayout;
+        ConstraintLayout parentLayout;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             businessName = itemView.findViewById(R.id.businessNameLabel);

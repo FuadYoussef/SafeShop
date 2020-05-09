@@ -1,11 +1,15 @@
 package tech.youssef.safeshop;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Business {
     private String name;
     private int numCustomers;
     private int numShopping;
     private int numWaiting;
     private int maxOccupancy;
+    private ArrayList<String> reviews = new ArrayList<>();
     private double rating;
     private int ratingSum;
     private int numRating;
@@ -47,10 +51,12 @@ public class Business {
         }
     }
 
-    public void addRating(int customerRating) {
+    public void addRating(int customerRating, String review) {
         numRating++;
         ratingSum += customerRating;
         rating = (double)ratingSum/(double)numRating;
+
+        reviews.add(review);
     }
 
     public int getNumCustomers() {
@@ -70,5 +76,9 @@ public class Business {
             return 0;
         }
         return rating;
+    }
+
+    public ArrayList<String> getReviews() {
+        return reviews;
     }
 }

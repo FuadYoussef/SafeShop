@@ -7,6 +7,13 @@
     android:background="@color/colorBackground"
     tools:context=".SignUpActivity">
 
+    <ImageView
+        android:layout_width="558dp"
+        android:layout_height="446dp"
+        android:src="@mipmap/rectangle_background"
+        android:text="background"
+        tools:layout_editor_absoluteX="-58dp"
+        tools:layout_editor_absoluteY="131dp" />
 
     <TextView
         android:id="@+id/createAccountLabel"
@@ -90,6 +97,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passConfirmEdit"
         android:onClick="launchSearch"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

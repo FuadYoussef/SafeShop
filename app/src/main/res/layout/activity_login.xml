@@ -4,34 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
-    tools:context=".SignUpActivity">
+    tools:context=".LoginActivity"
+    android:background="@color/colorBackground">
 
 
     <TextView
-        android:id="@+id/createAccountLabel"
+        android:id="@+id/loginLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create an Account:"
+        android:text="Log In:"
         android:textColor="@android:color/white"
         android:textSize="32dp"
-        app:layout_constraintBottom_toTopOf="@id/nameEdit"
+        app:layout_constraintBottom_toTopOf="@id/emailEdit"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/nameEdit"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint="Name"
-        app:layout_constraintBottom_toTopOf="@id/emailEdit"
-        app:layout_constraintHorizontal_bias="0.118"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/createAccountLabel"
-        android:maxLines="1"/>
 
     <EditText
         android:id="@+id/emailEdit"
@@ -42,19 +30,7 @@
         app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nameEdit"
-        android:maxLines="1"/>
-
-    <EditText
-        android:id="@+id/passConfirmEdit"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint="Confirm Password"
-        app:layout_constraintBottom_toTopOf="@id/createAccountButton"
-        app:layout_constraintHorizontal_bias="0.118"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordEdit"
+        app:layout_constraintTop_toBottomOf="@id/loginLabel"
         android:maxLines="1"/>
 
     <EditText
@@ -63,7 +39,7 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@id/passConfirmEdit"
+        app:layout_constraintBottom_toTopOf="@id/login"
         app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -71,16 +47,16 @@
         android:maxLines="1"/>
 
     <Button
-        android:id="@+id/createAccountButton"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Account"
+        android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passConfirmEdit"
-        android:onClick="launchSearch"/>
+        app:layout_constraintTop_toBottomOf="@id/passwordEdit"
+        android:onClick="login"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

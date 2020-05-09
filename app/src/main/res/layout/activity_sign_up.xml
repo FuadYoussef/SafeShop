@@ -31,7 +31,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/createAccountLabel"
-        android:maxLines="1"/>
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"/>
 
     <EditText
         android:id="@+id/emailEdit"
@@ -43,7 +45,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nameEdit"
-        android:maxLines="1"/>
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"/>
 
     <EditText
         android:id="@+id/passConfirmEdit"
@@ -55,7 +59,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordEdit"
-        android:maxLines="1"/>
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"/>
 
     <EditText
         android:id="@+id/passwordEdit"
@@ -68,7 +74,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailEdit"
-        android:maxLines="1"/>
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"/>
 
     <ImageView
         android:layout_width="150dp"

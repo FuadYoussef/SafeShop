@@ -20,5 +20,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchLogIn(View view) {
+        Intent loginIntent = new Intent(this, LoginActivity.class);
+        startActivity(loginIntent);
     }
 }

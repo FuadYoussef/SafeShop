@@ -2,6 +2,7 @@ package tech.youssef.safeshop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -13,7 +14,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public static void login(View view) {
-
+    public void login(View view) {
+        Intent searchIntent = new Intent(this, SearchActivity.class);
+        startActivity(searchIntent);
     }
 }

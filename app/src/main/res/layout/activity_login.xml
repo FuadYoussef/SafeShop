@@ -7,6 +7,29 @@
     tools:context=".LoginActivity"
     android:background="@color/colorBackground">
 
+    <ImageView
+        android:id="@+id/accountBackground"
+        android:layout_width="400dp"
+        android:layout_height="250"
+        android:src="@mipmap/profile_picture_image_half"
+        android:text="background"
+        app:layout_constraintBottom_toTopOf="@id/login"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profilePicture" />
+
+    <ImageView
+        android:id="@+id/profilePicture"
+        android:layout_width="97dp"
+        android:layout_height="107dp"
+        android:src="@mipmap/profile_picture_image"
+        android:text="background"
+        app:layout_constraintBottom_toTopOf="@id/accountBackground"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent
+"
+        app:layout_constraintTop_toBottomOf="@id/loginLabel"
+        app:layout_constraintVertical_bias="0.478" />
 
     <TextView
         android:id="@+id/loginLabel"
@@ -15,8 +38,7 @@
         android:text="Log In:"
         android:textColor="@android:color/white"
         android:textSize="32dp"
-        app:layout_constraintBottom_toTopOf="@id/emailEdit"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintBottom_toTopOf="@id/profilePicture"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,43 +47,43 @@
         android:id="@+id/emailEdit"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white"
         android:hint="Email Address"
-        app:layout_constraintBottom_toTopOf="@id/passwordEdit"
-        app:layout_constraintHorizontal_bias="0.118"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginLabel"
         android:maxLines="1"
         android:textColor="@android:color/white"
-        android:backgroundTint="@android:color/white"/>
+        app:layout_constraintBottom_toTopOf="@id/passwordEdit"
+        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintLeft_toLeftOf="@id/accountBackground"
+        app:layout_constraintRight_toRightOf="@id/accountBackground"
+        app:layout_constraintTop_toTopOf="@id/accountBackground" />
 
     <EditText
         android:id="@+id/passwordEdit"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white"
         android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@id/login"
-        app:layout_constraintHorizontal_bias="0.118"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailEdit"
         android:maxLines="1"
         android:textColor="@android:color/white"
-        android:backgroundTint="@android:color/white"/>
+        app:layout_constraintBottom_toBottomOf="@id/accountBackground"
+        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintLeft_toLeftOf="@id/accountBackground"
+        app:layout_constraintRight_toRightOf="@id/accountBackground"
+        app:layout_constraintTop_toBottomOf="@id/emailEdit" />
 
     <ImageView
         android:id="@+id/login"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:text="Log in"
+        android:onClick="login"
         android:src="@mipmap/log_in_button"
+        android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordEdit"
-        android:onClick="login"/>
+        app:layout_constraintTop_toBottomOf="@id/accountBackground" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

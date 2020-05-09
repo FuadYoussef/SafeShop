@@ -1,6 +1,5 @@
 package tech.youssef.safeshop;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Business {
@@ -117,5 +116,8 @@ public class Business {
     public void setNumShopping(int i) {
         this.numShopping = i;
         this.numCustomers = numWaiting+numShopping;
+    }
+    public void setRating(int i) {
+        rating = i;
     }
 }

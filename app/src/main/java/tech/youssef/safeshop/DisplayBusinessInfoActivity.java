@@ -14,6 +14,9 @@ import java.util.ArrayList;
 public class DisplayBusinessInfoActivity extends AppCompatActivity {
     String companyName;
     TextView companyNameTv;
+    TextView numPeople;
+    TextView numWaiting;
+    TextView maxOccupancy;
     private RecyclerView policyRecyclerView;
     private RecyclerView.Adapter policyAdapter;
     private RecyclerView.LayoutManager policyLayoutManager;
@@ -28,14 +31,45 @@ public class DisplayBusinessInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_business_info);
         companyNameTv = findViewById(R.id.businessNameLabel);
+        numPeople = findViewById(R.id.numInStoreValue);
+        numWaiting = findViewById(R.id.numWaitValue);
         Bundle extras = getIntent().getExtras();
         if(extras != null) {
             companyName = extras.getString("name");
             companyNameTv.setText(companyName);
+            numPeople.setText(Integer.toString(extras.getInt("num")));
+            numWaiting.setText(Integer.toString(extras.getInt("wait")));
         }
+        maxOccupancy = findViewById(R.id.maxOccupancyValue);
+
+
         ArrayList<String> policies = new ArrayList<>();
-        policies.add("6 feet apart");
-        policies.add("Wear Masks");
+        ArrayList<String> reviews = new ArrayList<>();
+        if (companyName.equals("Publix")) {
+            maxOccupancy.setText("50");
+            policies.add("Wipe down carts");
+            policies.add("Hand sanitizer stations");
+            policies.add("Employees must wear facemasks");
+
+            reviews.add("The store made sure its employees used facemasks at all times and also wore gloves while checking out the customers.");
+            reviews.add("The store did not have any wipes when I was there to clean the carts but they had sanitizer for the customers to use when entering and leaving the store");
+
+        } else if (companyName.equals("Kroger")) {
+            maxOccupancy.setText("100");
+            policies.add("Employees wear facemasks and gloves");
+            policies.add("Sanitizer stations");
+            policies.add("Shopping Cart Cleaning");
+
+            reviews.add("They did not have any way to clean the carts and the employees did not wear any gloves.");
+            reviews.add("When I went to this grocery store they did not have that many stations for cleaning the customers' hands.");
+        } else if (companyName.equals("Whole Foods")) {
+            maxOccupancy.setText("70");
+            policies.add("Face masks for employees");
+
+            reviews.add("They did not have any way to clean the carts and the employees did not wear any gloves.");
+            reviews.add("Even though they wore masks, the employees were not as careful as other stores I have been to. They also did not wipe down the carts after other people used them.");
+
+        }
         policyRecyclerView = findViewById(R.id.policyRecycle);
         policyLayoutManager = new LinearLayoutManager(this);
         policyRecyclerView.setLayoutManager(policyLayoutManager);
@@ -44,9 +78,7 @@ public class DisplayBusinessInfoActivity extends AppCompatActivity {
         policyAdapter = new ReviewAdapter(policies, this);
         policyRecyclerView.setAdapter(policyAdapter);
 
-        ArrayList<String> reviews = new ArrayList<>();
-        reviews.add("Very good");
-        reviews.add("felt very safe");
+
         reviewRecyclerView = findViewById(R.id.reviewRecycle);
         reviewLayoutManager = new LinearLayoutManager(this);
         reviewRecyclerView.setLayoutManager(reviewLayoutManager);

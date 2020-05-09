@@ -29,6 +29,8 @@ public class Business {
         this.numRating = 0;
         this.reviews = reviews;
         this.policies = policies;
+        this.type = type;
+        this.range = range;
     }
 
     public void addCustomer() {
@@ -106,5 +108,14 @@ public class Business {
 
     public int getRange() {
         return range;
+    }
+
+    public void setNumWaiting(int i) {
+        this.numWaiting = i;
+        this.numCustomers = numWaiting+numShopping;
+    }
+    public void setNumShopping(int i) {
+        this.numShopping = i;
+        this.numCustomers = numWaiting+numShopping;
     }
 }

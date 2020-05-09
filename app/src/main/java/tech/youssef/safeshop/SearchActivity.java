@@ -17,7 +17,7 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        Spinner typeSpinner = (Spinner) findViewById(R.id.typeSpinner);
+        typeSpinner = (Spinner) findViewById(R.id.typeSpinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> typeAdapter = ArrayAdapter.createFromResource(this,
                 R.array.store_type_array, android.R.layout.simple_spinner_item);
@@ -26,7 +26,7 @@ public class SearchActivity extends AppCompatActivity {
         // Apply the adapter to the spinner
         typeSpinner.setAdapter(typeAdapter);
 
-        Spinner locationSpinner = (Spinner) findViewById(R.id.locationSpinner);
+        locationSpinner = (Spinner) findViewById(R.id.locationSpinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> locationAdapter = ArrayAdapter.createFromResource(this,
                 R.array.store_location_array, android.R.layout.simple_spinner_item);
@@ -35,7 +35,7 @@ public class SearchActivity extends AppCompatActivity {
         // Apply the adapter to the spinner
         locationSpinner.setAdapter(locationAdapter);
 
-        Spinner sortSpinner = (Spinner) findViewById(R.id.sortBySpinner);
+        sortSpinner = (Spinner) findViewById(R.id.sortBySpinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> sortAdapter = ArrayAdapter.createFromResource(this,
                 R.array.sort_by_array, android.R.layout.simple_spinner_item);

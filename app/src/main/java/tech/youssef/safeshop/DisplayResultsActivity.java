@@ -22,6 +22,7 @@ public class DisplayResultsActivity extends AppCompatActivity {
             type = extras.getString("type");
             sort = extras.getString("sort");
             location = extras.getInt("location");
+            System.out.println(type);
         }
         ArrayList<Business> businesses = new ArrayList<>();
         ArrayList<String> reviews1 = new ArrayList<>();
@@ -33,6 +34,12 @@ public class DisplayResultsActivity extends AppCompatActivity {
         Business b1 = new Business("Publix", 50, 5, "Grocery Store" ,reviews1, policy1);
         Business b2 = new Business("Kroger", 100, 10, "Grocery Store" ,reviews2, policy2);
         Business b3 = new Business("Whole Foods", 70, 20, "Grocery Store" ,reviews3, policy3);
+        b1.setNumShopping(20);
+        b1.setNumWaiting(30);
+        b2.setNumShopping(10);
+        b2.setNumWaiting(5);
+        b3.setNumShopping(50);
+        b3.setNumWaiting(15);
         businesses.add(b1);
         businesses.add(b2);
         businesses.add(b3);
@@ -42,36 +49,24 @@ public class DisplayResultsActivity extends AppCompatActivity {
         ArrayList<Business> temp = new ArrayList<>();
 
         for (Business b : businesses) {
-            if (b.getRange() < location && b.getType().equals(type)) {
-                temp.add(b);
+            if (b.getRange() <= location && b.getType().equals(type)) {
+                if (sort.equals("Number of People")) {
+                    int i = 0;
+                    while (i < temp.size() && b.getNumCustomers() > temp.get(i).getNumCustomers()) {
+                        i++;
+                    }
+                    temp.add(i, b);
+                } else if(sort.equals("Wait Line Length")) {
+                    int i = 0;
+                    while (i < temp.size() && b.getNumWaiting() > temp.get(i).getNumWaiting()) {
+                        i++;
+                    }
+                    temp.add(i, b);
+                }
+
             }
         }
 
-        if(sort.equals("Number of People")) {
-            for (int i = 1; i < temp.size(); i++) {
-                int current = temp.get(i).getNumCustomers();
-                int j = i - 1;
-                while(j >= 0 && current < temp.get(j).getNumCustomers()) {
-                    temp.set(j+1, temp.get(j));
-                    j--;
-                }
-                // at this point we've exited, so j is either -1
-                // or it's at the first element where current >= a[j]
-                temp.set(j+1, temp.get(i));
-            }
-        } else if(sort.equals("Wait Line Length")) {
-            for (int i = 1; i < temp.size(); i++) {
-                int current = temp.get(i).getNumWaiting();
-                int j = i - 1;
-                while(j >= 0 && current < temp.get(j).getNumWaiting()) {
-                    temp.set(j+1, temp.get(j));
-                    j--;
-                }
-                // at this point we've exited, so j is either -1
-                // or it's at the first element where current >= a[j]
-                temp.set(j+1, temp.get(i));
-            }
-        }
 
         for (Business b: temp) {
             bnames.add(b.getName());

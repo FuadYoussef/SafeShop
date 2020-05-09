@@ -64,6 +64,8 @@ public class mAdapter extends RecyclerView.Adapter<mAdapter.ViewHolder> {
         public void onClick(View view) {
             Intent reviewIntent = new Intent(view.getContext(), DisplayBusinessInfoActivity.class);
             reviewIntent.putExtra("name", businessName.getText());
+            reviewIntent.putExtra("num", Integer.parseInt(numPeople.getText().toString()));
+            reviewIntent.putExtra("wait", Integer.parseInt(waitLine.getText().toString()));
             view.getContext().startActivity(reviewIntent);
         }
     }

@@ -23,7 +23,7 @@
         android:id="@+id/SafeShopText"
         android:layout_width="250dp"
         android:layout_height="100dp"
-        android:src="@mipmap/Logo"
+        android:src="@mipmap/logo"
         android:text="SafeShop"
         android:textColor="@android:color/white"
         android:textSize="24dp"

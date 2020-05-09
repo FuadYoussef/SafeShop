@@ -9,15 +9,15 @@
 
     <ImageView
         android:id="@+id/accountBackground"
-        android:layout_width="500dp"
-        android:layout_height="375dp"
-        android:src="@mipmap/rectangle_background"
+        android:layout_width="700dp"
+        android:layout_height="400dp"
+        android:src="@mipmap/account_page_background"
         android:text="background"
-        app:layout_constraintTop_toBottomOf="@id/profilePicture"
+        app:layout_constraintBottom_toTopOf="@id/createAccountButton"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/createAccountButton"
-        />
+        app:layout_constraintTop_toBottomOf="@id/profilePicture" />
 
     <ImageView
         android:id="@+id/profilePicture"

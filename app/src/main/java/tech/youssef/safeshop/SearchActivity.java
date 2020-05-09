@@ -3,6 +3,7 @@ package tech.youssef.safeshop;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -44,5 +45,9 @@ public class SearchActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         return;
+    }
+
+    public void search(View view) {
+
     }
 }

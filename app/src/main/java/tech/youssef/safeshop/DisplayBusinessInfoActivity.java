@@ -126,5 +126,6 @@ public class DisplayBusinessInfoActivity extends AppCompatActivity {
         Intent reviewIntent = new Intent(view.getContext(), AddReviewActivity.class);
         reviewIntent.putExtra("name", companyName);
         view.getContext().startActivity(reviewIntent);
+        finish();
     }
 }

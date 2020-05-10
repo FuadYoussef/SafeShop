@@ -35,11 +35,11 @@ public class DisplayResultsActivity extends AppCompatActivity {
         Business b2 = new Business("Kroger", 100, 10, "Grocery Store" ,reviews2, policy2);
         Business b3 = new Business("Whole Foods", 70, 20, "Grocery Store" ,reviews3, policy3);
         b1.setNumShopping(20);
-        b1.setNumWaiting(1);
+        b1.setNumWaiting(15);
         b2.setNumShopping(10);
-        b2.setNumWaiting(5);
+        b2.setNumWaiting(10);
         b3.setNumShopping(50);
-        b3.setNumWaiting(15);
+        b3.setNumWaiting(5);
         b1.setRating(3);
         b2.setRating(2);
         b3.setRating(4);

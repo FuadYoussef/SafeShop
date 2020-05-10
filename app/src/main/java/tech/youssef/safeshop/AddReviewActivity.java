@@ -82,7 +82,8 @@ public class AddReviewActivity extends AppCompatActivity {
                 "Review Added",
                 Toast.LENGTH_SHORT);
         toast.show();
-        Intent returnIntent = new Intent(this, DisplayResultsActivity.class);
-        startActivity(returnIntent);
+        //Intent returnIntent = new Intent(this, DisplayResultsActivity.class);
+        //startActivity(returnIntent);
+        finish();
     }
 }

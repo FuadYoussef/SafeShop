@@ -78,6 +78,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="Confirm Password"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@id/createAccountButton"
         app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintLeft_toLeftOf="parent"
